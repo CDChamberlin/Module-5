@@ -1,0 +1,39 @@
+#operator{
+    display: flex;
+    align-items: end;
+}
+.form-control{
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.1;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+}
+.input-control{
+    font-size: 1.70em;
+    align-content: top;
+    margin-right: 20px;
+}
+.form-submit{
+    margin-top: 10px;
+    font-size: 1.25em;
+    line-height: 1.1;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    }
+@media screen and (min-width: 800px) {
+    .column {
+      flex: 2;
+    }
+  }

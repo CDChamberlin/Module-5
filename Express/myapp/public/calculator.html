@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Collin Chamberlin" />
+    <title>Calculator Example</title>
+    <link rel="stylesheet" href="css/calculator.css" />
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <section id="operator" class="row">
+      <section class="column">
+        <label for="result" class="input-control">Result</label><br />
+        <input
+          type="text"
+          class="input-control"
+          value=""
+          name="result"
+          id="result"
+        />
+        <br />
+      </section>
+      <section class="row">
+        <form id="Calcs" class="column">
+          <label class="form-control">
+            <input type="radio" name="operator" id="plus" value="+" checked />
+            + </label
+          ><br />
+
+          <label class="form-control">
+            <input type="radio" name="operator" id="minus" value="-" />
+            - </label
+          ><br />
+
+          <label class="form-control">
+            <input type="radio" name="operator" id="multiply" value="x" />
+            x </label
+          ><br />
+
+          <label class="form-control">
+            <input type="radio" name="operator" id="division" value="/" />
+            / </label
+          ><br />
+
+          <input
+            class="form-submit"
+            type="submit"
+            value="Equals"
+            onclick="eval(event)"
+          />
+        </form>
+        <section class="column">
+          <label for="num1" class="input-control">First Number</label><br />
+          <input
+            type="text"
+            id="num1"
+            value=""
+            name="num1"
+            class="input-control"
+          /><br />
+          <label for="num2" class="input-control"> Second Number </label><br />
+          <input
+            type="text"
+            id="num2"
+            value=""
+            name="num2"
+            class="input-control"
+          /><br />
+          <input
+            type="button"
+            value="Clear"
+            class="form-submit"
+            onclick="reset()"
+          />
+        </section>
+      </section>
+    </section>
+    <pre id="log"></pre>
+  </body>
+  <script>
+    let num1 = 10;
+    let num2 = 4;
+    fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result").value = data.result;
+      });
+  </script>
+</html>
