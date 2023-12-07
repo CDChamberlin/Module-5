@@ -42,7 +42,7 @@ const divideNumbers = (req, res) =>{
   let number2 = parseFloat(req.query.num2)
   console.log(number1, number2);
 
-  let quotient = myCalc.add(number1, number2)
+  let quotient = myCalc.divide(number1, number2)
 //   console.log(number1, number2, sum)
   
 //   res.status(200)  //200 means good response, 201 means created/updated, 404 = not found
