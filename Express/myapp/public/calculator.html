@@ -46,7 +46,7 @@
             class="form-submit"
             type="submit"
             value="Equals"
-            onclick="eval(event)"
+            onclick="calculates(event)"
           />
         </form>
         <section class="column">
@@ -77,13 +77,5 @@
     </section>
     <pre id="log"></pre>
   </body>
-  <script>
-    let num1 = 10;
-    let num2 = 4;
-    fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
-      .then((response) => response.json())
-      .then((data) => {
-        document.getElementById("result").value = data.result;
-      });
-  </script>
+  <script src="js/calculator.js"></script>
 </html>
