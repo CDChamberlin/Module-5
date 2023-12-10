@@ -44,6 +44,75 @@ const config = {
           },
         },
       },
+        "/calculator/subtract": {
+          get: {
+            tags: ["Subtraction Service"],
+            summary: "Subtracts number 2 from number 1",
+            parameters: [
+              {
+                name: "num1",
+                in: "query",
+                description: "The First Number"
+              },
+              {
+                name: "num2",
+                in: "query",
+                description: "The Second number"
+              }
+            ],
+            responses: {
+              200: {
+                description: "This service allows you to find the difference between two numbers"
+              }
+            }
+          }
+        },
+        "/calculator/multiply": {
+          get: {
+            tags: ["Multiplication Service"],
+            summary: "Multiplies 2 numbers",
+            parameters: [
+              {
+                name: "num1",
+                in: "query",
+                description: "The First Number"
+              },
+              {
+                name: "num2",
+                in: "query",
+                description: "The Second number"
+              }
+            ],
+            responses: {
+              200: {
+                description: "This service allows you to multiply two numbers together"
+              }
+            }
+          }
+        },
+        "/calculator/division": {
+          get: {
+            tags: ["Division Service"],
+            summary: "Divides number 1 by number 2",
+            parameters: [
+              {
+                name: "num1",
+                in: "query",
+                description: "The First Number"
+              },
+              {
+                name: "num2",
+                in: "query",
+                description: "The Second number"
+              }
+            ],
+            responses: {
+              200: {
+                description: "This service allows you to divide two numbers"
+              }
+            }
+          }
+        }
     },
   };
   

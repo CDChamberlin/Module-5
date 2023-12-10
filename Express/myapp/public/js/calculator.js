@@ -20,7 +20,7 @@ function calculates(event) {
     alert("Second number missing");
     haveInputs = false;
   }
-  
+
   if (haveInputs) {
     // Make sure that there are valid inputs before doing calculations
     switch (data.get("operator")) {
@@ -56,7 +56,7 @@ function calculates(event) {
   }
   return false;
 }
-// Clear onClick event 
+// Clear onClick event
 function reset(event) {
   document.getElementById("num1").value = "";
   document.getElementById("num2").value = "";
