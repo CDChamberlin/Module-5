@@ -12,22 +12,15 @@ function calculates(event) {
   const num2 = parseFloat(document.getElementById("num2").value);
   // console.log(data.get("operator"));
   // Validates inputs... Doesn't check that they are valid numbers.
-  if (num1 == NaN) {
+  if (Number.isNaN(num1)) {
     alert("First number missing");
     haveInputs = false;
   }
-  if (num2 === "NaN") {
+  if (Number.isNaN(num2)) {
     alert("Second number missing");
     haveInputs = false;
   }
-  console.log(
-    "Inputs are numbers: " +
-      haveInputs +
-      "/n Number 1: " +
-      num1 +
-      "/n Number 2: " +
-      num2
-  );
+  
   if (haveInputs) {
     // Make sure that there are valid inputs before doing calculations
     switch (data.get("operator")) {
@@ -63,7 +56,7 @@ function calculates(event) {
   }
   return false;
 }
-// Clear onClick event
+// Clear onClick event 
 function reset(event) {
   document.getElementById("num1").value = "";
   document.getElementById("num2").value = "";
