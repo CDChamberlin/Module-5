@@ -1,3 +1,7 @@
+/*
+  Original script file from Module 4 Fake Store. 
+*/
+
 let productList = [];
 function addCard(img, title, price, description) {
   const template = document
@@ -14,14 +18,14 @@ function addCard(img, title, price, description) {
   document.querySelector("#card-list").appendChild(template);
 }
 
-fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((json) => {
-    json.forEach((element) => {
-      addCard(element.image, element.title, element.price, element.description);
-      productList.push(element);
-    });
-  });
+// fetch("https://fakestoreapi.com/products")
+//   .then((res) => res.json())
+//   .then((json) => {
+//     json.forEach((element) => {
+//       addCard(element.image, element.title, element.price, element.description);
+//       productList.push(element);
+//     });
+//   });
 
 function isValidHttpUrl(string) {
   try {
@@ -31,7 +35,7 @@ function isValidHttpUrl(string) {
     return false;
   }
 }
-console.log(productList);
+//console.log(productList);
 function filterCatagories(event) {
   //dropdown selected.
   const list = document.getElementById("card-list");
