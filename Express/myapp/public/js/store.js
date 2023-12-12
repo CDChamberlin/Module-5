@@ -70,10 +70,12 @@ function isValidHttpUrl(string) {
 function filterCategories(event) {
   event.preventDefault();
   const selected = event.target.id;
-  console.log(selected);
-  if (selected === "products") {
-  } else {
-  }
+    const filteredProducts =
+    selected === "all products"
+      ? productList
+      : productList.filter((item) => item.category.toLowerCase() === selected);
+
+  displayFilteredCards(filteredProducts);
 }
 
 function displayFilteredCards(filteredProducts) {
