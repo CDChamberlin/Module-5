@@ -17,7 +17,7 @@ app.use("/", express.static("public"));
 
 app.use("/calculator", calculatorRoutes);
 
-app.use("/products", storeRoutes);
+app.use("/store", storeRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
